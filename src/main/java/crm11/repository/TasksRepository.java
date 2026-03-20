@@ -190,6 +190,8 @@ public class TasksRepository {
 	        return statments.executeUpdate() > 0;
 
 	    } catch (Exception e) {
+	    	System.out.println("JOB ID = " + task.getJobs().getId());
+	    	System.out.println("UserID = " + task.getUsers().getId());
 	        System.out.println("Error updateTask: " + e.getMessage());
 	    }
 

@@ -42,8 +42,8 @@ public class UserTableController extends HttpServlet{
 	            uiUser(req,resp);
 	            break;
 	        case "/user-edit":
-	        		uieditByIdUser(req,resp);
-	        		break;
+	        	uieditByIdUser(req,resp);
+	        	break;
 		} 
 		
 	}
@@ -115,6 +115,9 @@ public class UserTableController extends HttpServlet{
 	    String message = usersServices.insertUser(userEntity);
 	    
 	    req.setAttribute("message", message);
+		List<RolesEntity> listAllRoles = usersServices.getAllRoles();
+		
+		req.setAttribute("listAllRoles", listAllRoles);
 	    
 		req.getRequestDispatcher("user-add.jsp").forward(req, resp);
 	}

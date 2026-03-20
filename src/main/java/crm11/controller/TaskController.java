@@ -65,7 +65,7 @@ public class TaskController extends HttpServlet{
 	    int jobId = Integer.parseInt(req.getParameter("job_id"));
 	    int userId = Integer.parseInt(req.getParameter("user_id"));
 
-	    tasksServices.updateTask(id, name, start, end, jobId, userId);
+	    tasksServices.updateTask(id, name, start, end, userId, jobId);
 	}
 	
 	private void uiEditTaskById (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

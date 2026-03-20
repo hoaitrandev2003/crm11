@@ -57,7 +57,7 @@ public class AuthenticationFilter implements Filter {
 
         // chưa đăng nhập nhảy về trang login
         if (role == null) {
-            resp.sendRedirect(req.getContextPath() + "/p-login");
+            resp.sendRedirect(req.getContextPath() + "/login.jsp");
             return;
         }
 
